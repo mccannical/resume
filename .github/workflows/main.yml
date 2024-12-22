@@ -4,7 +4,8 @@ name: Publish resume in JSONResume format as Github Page
  
 on:
   push:
-    branches: [ main * ]
+    branches: 
+      - '*'         # matches every branch that doesn't contain a '/'
   workflow_dispatch:
 
 jobs:
