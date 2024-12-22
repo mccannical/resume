@@ -1,0 +1,663 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+  <title>Jesse McCann</title>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <style>/* Utils */
+/*----- Colors -----*/
+/*----- Fonts -----*/
+/*----- Dimensions and sizes -----*/
+/* Base */
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Josefin Sans Light'), local('JosefinSans-Light'), url(https://fonts.gstatic.com/s/josefinsans/v14/Qw3FZQNVED7rKGKxtqIqX5Ecpl5te10k.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Josefin Sans Bold'), local('JosefinSans-Bold'), url(https://fonts.gstatic.com/s/josefinsans/v14/Qw3FZQNVED7rKGKxtqIqX5Ectllte10k.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Lato Light Italic'), local('Lato-LightItalic'), url(https://fonts.gstatic.com/s/lato/v16/S6u_w4BMUTPHjxsI9w2_Gwfo.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v16/S6u8w4BMUTPHjxsAXC-v.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v16/S6u_w4BMUTPHjxsI5wq_Gwfo.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh7USSwiPHA.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v16/S6uyw4BMUTPHjx4wWw.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh6UVSwiPHA.ttf) format('truetype');
+}
+
+html {
+  background: white;
+}
+
+body {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  background: white;
+  margin: 50px 0 100px;
+  letter-spacing: .3px;
+  color: #39424B;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: none;
+  margin: 0;
+}
+
+h1 {
+  font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: .5px;
+}
+
+h3 {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: .4px;
+}
+
+h3.bold {
+  font-weight: 700;
+}
+
+h4 {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+}
+
+h4.bold {
+  font-weight: 700;
+}
+
+h5 {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 11px;
+}
+
+h5.italic {
+  font-style: italic;
+}
+
+h6 {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #2895F1;
+}
+
+a .fa-external-link {
+  font-size: 10px;
+  vertical-align: text-top;
+}
+
+p,
+li {
+  font-size: 11px;
+}
+
+blockquote {
+  font-size: 11px;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  margin: 10px 25px;
+}
+
+em {
+  color: #999;
+}
+
+ul {
+  margin: 10px 0 0;
+  -webkit-padding-start: 25px;
+}
+
+ul li {
+  padding-left: 10px;
+}
+
+ul.minimal {
+  list-style: none;
+  padding: 0;
+}
+
+ul.minimal li {
+  margin-bottom: 3px;
+  padding-left: 0;
+}
+
+ul.two-column {
+  -webkit-column-count: 2;
+  -webkit-column-gap: 28px;
+  column-count: 2;
+  column-gap: 28px;
+}
+
+ul.two-column li {
+  padding-left: 0;
+}
+
+@page {
+  size: A4;
+}
+
+.container {
+  padding-top: 20px;
+}
+
+.keyline {
+  width: 45px;
+  margin: 8px 0 10px;
+  border-top: 1px solid #56817A;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.profile-pic {
+  margin-top: -5px;
+  margin-right: 18px;
+}
+
+.profile-pic img {
+  height: 52px;
+  width: 52px;
+  border-radius: 50%;
+  border: 2px solid #56817A;
+}
+
+.summary {
+  margin: 5px 0 5px;
+}
+
+.sublink {
+  font-size: 70%;
+  font-weight: 200;
+  color: dimgray;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+/* Layouts */
+.page {
+  background: white;
+  width: 612px;
+  min-height: 792px;
+  display: block;
+  margin: 0 auto;
+  border-top: 10px solid #56817A;
+  padding: 36px 22px 30px 34px;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+}
+
+.page:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.left-column {
+  float: left;
+  width: 160px;
+  margin-right: 20px;
+  word-wrap: break-word;
+}
+
+.right-column {
+  width: auto;
+  overflow: hidden;
+}
+
+.item {
+  margin-bottom: 15px;
+}
+
+.item:last-child {
+  margin-bottom: 0;
+}
+
+@media print {
+  body {
+    margin: 0;
+  }
+
+  .page {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 36px 0 30px;
+    box-shadow: none;
+  }
+
+  .page .resume-header,
+  .page .resume-content {
+    padding: 0 22px 0 34px;
+  }
+
+  .container {
+    page-break-inside: avoid;
+  }
+
+  .work-container .item {
+    page-break-inside: avoid;
+  }
+
+  .fa-external-link {
+    display: none;
+  }
+}
+
+/* Components */
+.info-tag-container {
+  margin-bottom: 5px;
+}
+
+.info-tag-container .fa {
+  font-size: 14px;
+  width: 12px;
+  margin-right: 5px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.info-tag-container .fa.fa-map-marker {
+  font-size: 16px;
+}
+
+.info-tag-container .fa.fa-mobile {
+  font-size: 18px;
+}
+
+.info-tag-container .fa.fa-envelope-o {
+  font-size: 12px;
+}
+
+.info-tag-container .fa.fa-desktop {
+  font-size: 11px;
+}
+
+.info-tag-container .fa.fa-external-link {
+  width: auto;
+  font-size: inherit;
+  vertical-align: text-top;
+}
+
+.info-tag-container .info-text {
+  font-size: 12px;
+  text-transform: none;
+  display: inline-block;
+  vertical-align: middle;
+  width: 139px;
+}
+
+.references-container .fa {
+  font-size: 14px;
+}
+
+.education-container .location {
+  padding-bottom: 6px;
+  font-weight: 400;
+}
+
+.education-container .specialization {
+  text-transform: none;
+  font-style: italic;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.main-skill {
+  font-size: 80%;
+}
+
+.skill {
+  margin: .15em;
+  padding: .15em;
+  background: ghostwhite;
+  border-radius: 5px;
+}
+</style>
+</head>
+
+<body>
+  <main id="resume" class="page">
+    <header class="resume-header clearfix">
+        <div class="profile-header pull-left">
+            <h1>Jesse McCann</h1>
+            <h2>Site Reliability Engineer</h2>
+        </div>
+        <div class="profile-pic pull-right">
+        </div>
+    </header>
+    <div class="resume-content">
+      <aside class="left-column">
+        <div class="container about-container">
+            <div class="title">
+                <h3>About</h3>
+                <div class="keyline"></div>
+            </div>
+                <div class="info-tag-container">
+                    <i class="fa fa-map-marker"></i>
+                
+                        <h6 class="info-text"> Philadelphia Pennsylvania  US</h6>
+                </div>
+        
+        
+                <div class="info-tag-container">
+                    <i class="fa fa-envelope-o"></i>
+                
+                        <h6 class="info-text">
+                            <a href="mailto:jesse@mccannical.com" target="_blank">
+                                jesse@mccannical.com
+                            </a>
+                        </h6>
+                </div>
+        
+                <div class="info-tag-container">
+                    <i class="fa fa-mobile"></i>
+                
+                        <h6 class="info-text">(818( 403-8142</h6>
+                </div>
+        
+        
+                                 <div class="info-tag-container">
+                                     <i class="fa fa-bluesky"></i>
+                                 
+                                         <h6 class="info-text">
+                                             <a href="https://bsky.app/profile/mccannical.bsky.social" target="_blank">
+                                                 mccannical.bsky.social
+                                             </a>
+                                         </h6>
+                                 </div>
+                                <div class="info-tag-container">
+                                    <i class="fa fa-linkedin-square"></i>
+                                
+                                        <h6 class="info-text">
+                                            <a href="https://www.linkedin.com/in/jessemccann/" target="_blank">
+                                                jessemccann
+                                            </a>
+                                        </h6>
+                                </div>
+        </section>
+            <div class="skills-container">
+                    <section class="container">
+                            <div class="title">
+                                <h3>Infrastructure</h3>
+                                <div class="keyline"></div>
+                            </div>                    <h4 class="bold capitalize">Master</h4>
+                            <div class="minimal flex-container">
+                                    <h6 class="main-skill skill">Terraform/OpenTofu</h6>
+                                    <h6 class="main-skill skill">Ansible</h6>
+                                    <h6 class="main-skill skill">GCP</h6>
+                                    <h6 class="main-skill skill">AWS</h6>
+                                    <h6 class="main-skill skill">OnPrem</h6>
+                            </div>
+                    </section>
+                    <section class="container">
+                            <div class="title">
+                                <h3>Software Engineering</h3>
+                                <div class="keyline"></div>
+                            </div>                    <h4 class="bold capitalize">Advanced</h4>
+                            <div class="minimal flex-container">
+                                    <h6 class="main-skill skill">Go</h6>
+                                    <h6 class="main-skill skill">Python</h6>
+                                    <h6 class="main-skill skill">Bash</h6>
+                                    <h6 class="main-skill skill">Node.js</h6>
+                                    <h6 class="main-skill skill">Powershell</h6>
+                            </div>
+                    </section>
+            </div>
+            <div class="container interests-container">
+                <div class="title">
+                    <h3>Interests</h3>
+                    <div class="keyline"></div>
+                </div>
+                    <section class="item">
+                            <h4 class="bold">Wildlife</h4>
+                            <ul class="minimal">
+                                    <li>Conservation</li>
+                                    <li>Tracking</li>
+                            </ul>
+                    </section>
+                    <section class="item">
+                            <h4 class="bold">Guitar</h4>
+                            <ul class="minimal">
+                                    <li></li>
+                            </ul>
+                    </section>
+                    <section class="item">
+                            <h4 class="bold">Horror Movies</h4>
+                            <ul class="minimal">
+                                    <li></li>
+                            </ul>
+                    </section>
+            </div>
+      </aside>
+      <div class="right-column">
+                <div class="container summary-container">
+                    <div class="title">
+                        <h3>Summary</h3>
+                        <div class="keyline"></div>
+                    </div>            <p class="summary">
+                        Accomplished Senior Systems Engineer with over 15 years of success in driving cloud infrastructure and system reliability across diverse organizations. Track record of spearheading system maturity, ensuring compliance with industry standards, and implementing robust security measures. Instrumental in designing and implementing robust and scalable infrastructure architectures that meet the organization&#x27;s needs by evaluating requirements, selecting appropriate technologies, and creating design plans. Adept at cross-functional collaboration, continuous learning initiatives, and implementing best practices to optimize cloud networking, infrastructure, and expenditure. Proven ability to monitor system performance, identify bottlenecks, and optimize resources to ensure high availability and reliability. Exceptional leadership capabilities in orchestrating strategic migrations, enhancing operational efficiency, and empowering teams with novel technologies. Passionate about leveraging technology for societal good and advancing corporate goals through innovative solutions.
+                    </p>
+                </div>
+        <div class="container work-container">
+            <div class="title">
+                <h3>Experience</h3>
+                <div class="keyline"></div>
+            </div>
+                <section class="item">
+                    <div class="section-header clearfix">
+                        <h3 class="bold pull-left">
+                                <a href="https://www.dtexsystems.com/" target="_blank">
+                                    DTEX Systems
+                                </a>
+                        </h3>
+                        <h5 class="italic pull-right">
+                                <span class="startDate">05/2024</span>
+                                <span class="endDate"> - Invalid date</span>
+                        </h5>
+                    </div>
+                      <h4>
+                        Joined small team to design and build FedRAMP compliant environment from greenfield, ATO, and Acceptance. Reduced time to deploy a customer from 1d to 1h. Developed internal tools to reduce friction interacting with customer environments. Led development of automation of customer environments.
+                      </h4>
+        
+                    <h4>Site Reliability Engineer</h4>
+        
+        
+                    <p class="summary">Joined small team to design and build FedRAMP compliant environment from greenfield, ATO, and Acceptance. Reduced time to deploy a customer from 1d to 1h. Developed internal tools to reduce friction interacting with customer environments. Led development of automation of customer environments.</p>
+        
+                    <ul>
+                        <li>Started the company</li>
+                    </ul>
+                </section>
+                <section class="item">
+                    <div class="section-header clearfix">
+                        <h3 class="bold pull-left">
+                                <a href="https://www.confluent.io/" target="_blank">
+                                    Confluent
+                                </a>
+                        </h3>
+                        <h5 class="italic pull-right">
+                                <span class="startDate">11/2020</span>
+                                <span class="endDate"> - 04/2024</span>
+                        </h5>
+                    </div>
+                      <h4>
+                        Spearhead system maturity throughout Confluent&#x27;s pre-IPO, IPO, and post-IPO phases, driving continuous learning initiatives among engineering teams. Collaborate cross-functionally to ensure project success in Security, Infrastructure, and CI/CD domains, prioritizing holistic reliability. Establish and enforce best practices for system security, mitigating risks and ensuring compliance with industry standards. Develop a monitoring system on Google Cloud Platform (GCP) for real-time performance visibility, facilitating proactive issue resolution and optimization efforts.Enhanced security and reliability of cloud infrastructure for Kubernetes and serverless environments, reducing vulnerabilities by 85%.Automated manual processes by developing serverless backend services, enhancing operational efficiency and scalability.Optimized cloud networking, infrastructure, and expenditure by leveraging DevOps methodologies, resulting in enhanced efficiency and cost savings.Streamlined deployment processes using Terraform and Atlantis, achieving a 90% reduction in deployment time and enhancing operational agility.Implemented robust CI/CD pipelines to enable rapid and reliable application deployment, contributing to improved development velocity.
+                      </h4>
+        
+                    <h4>Sr. Cloud Systems Engineer</h4>
+        
+        
+                    <p class="summary">Spearhead system maturity throughout Confluent&#x27;s pre-IPO, IPO, and post-IPO phases, driving continuous learning initiatives among engineering teams. Collaborate cross-functionally to ensure project success in Security, Infrastructure, and CI/CD domains, prioritizing holistic reliability. Establish and enforce best practices for system security, mitigating risks and ensuring compliance with industry standards. Develop a monitoring system on Google Cloud Platform (GCP) for real-time performance visibility, facilitating proactive issue resolution and optimization efforts.
+        </p>
+        
+                    <ul>
+                        <li>Enhanced security and reliability of cloud infrastructure for Kubernetes and serverless environments, reducing vulnerabilities by 85%. Automated manual processes by developing serverless backend services, enhancing operational efficiency and scalability. Optimized cloud networking, infrastructure, and expenditure by leveraging DevOps methodologies, resulting in enhanced efficiency and cost savings. Streamlined deployment processes using Terraform and Atlantis, achieving a 90% reduction in deployment time and enhancing operational agility. Implemented robust CI/CD pipelines to enable rapid and reliable application deployment, contributing to improved development velocity.</li>
+                    </ul>
+                </section>
+                <section class="item">
+                    <div class="section-header clearfix">
+                        <h3 class="bold pull-left">
+                                <a href="https://www.blackline.com/" target="_blank">
+                                    Blackline
+                                </a>
+                        </h3>
+                        <h5 class="italic pull-right">
+                                <span class="startDate">02/2018</span>
+                                <span class="endDate"> - 11/2020</span>
+                        </h5>
+                    </div>
+        
+                    <h4>STAFF SYSTEM ENGINEER</h4>
+        
+        
+                    <p class="summary">Directed the migration of legacy infrastructure to Google Cloud Platform (GCP) using Terraform, optimizing reliability and scalability. Managed the Atlassian Stack to ensure high availability of essential tools, facilitating seamless collaboration and workflow management. Integrated SAP Resolve with Salesforce to streamline operations and improve efficiency in data management and resolution processes.  Established a version control system for cloud infrastructure using GitLab, ensuring reliability and version consistency across environments. Provided comprehensive training on Git, PowerShell, Python, Terraform, and cloud technologies to facilitate skill development and knowledge sharing within the team.
+        </p>
+        
+                    <ul>
+                        <li>Designed scalable and reliable cloud platforms, driving cost savings and operational efficiency across the organization. Automated HRIS updates to enhance employee management processes, increasing efficiency/accuracy in HR operations. Implemented automated Linux server configuration leveraging GitLab CI/CD, significantly improving deployment efficiency and reducing manual errors. Automated server deployment and patch management processes, optimizing system stability and reducing downtime. Streamlined tool upgrades through GitLab CI/CD integration, minimizing disruptions and maximizing productivity. Led DevOps initiatives, empowering teams with CI/CD and GitOps methodologies to boost development velocity and operational efficiency.</li>
+                    </ul>
+                </section>
+                <section class="item">
+                    <div class="section-header clearfix">
+                        <h3 class="bold pull-left">
+                                <a href="https://www.appliedminds.com/" target="_blank">
+                                    Applied Minds
+                                </a>
+                        </h3>
+                        <h5 class="italic pull-right">
+                                <span class="startDate">02/2018</span>
+                                <span class="endDate"> - 11/2014</span>
+                        </h5>
+                    </div>
+        
+                    <h4>SENIOR SYSTEMS ENGINEER</h4>
+        
+        
+                    <p class="summary">Spearheaded the organization&#x27;s journey to NIST-171 compliance by implementing robust security controls, ensuring adherence to industry standards and best practices. Developed real-time monitoring capabilities using the ELK stack on Azure, enabling proactive identification and resolution of system issues. Engineered robust backup and disaster recovery mechanisms with Azure, ensuring data integrity and business continuity in the event of unforeseen circumstances. Maintained comprehensive system documentation to ensure transparency and facilitate knowledge sharing among team members. Configured and maintained firewall, network, and cloud security measures to safeguard organizational assets and data integrity. Collaborated closely with engineering and software development teams, providing expertise and guidance on project initiatives to ensure alignment with organizational objectives.
+        </p>
+        
+                    <ul>
+                        <li>Successfully orchestrated the migration of internal applications to Amazon Web Services (AWS) within established timelines and budgetary constraints, ensuring seamless transition and minimal disruption to operations. Maintained an uptime of 99.99% for all internal services, ensuring uninterrupted access and reliability for end-users.</li>
+                        <li>Led the migration of Exchange to Office 365, using cloud-based solutions for improved collaboration and productivity.</li>
+                        <li>Obtained Secret clearance, demonstrating trustworthiness and commitment to security protocols.</li>
+                        <li>Designed secure cloud-based architectures for scalability and resilience, leveraging best practices to mitigate risks and enhance operational agility.</li>
+                        <li>Optimized system performance through strategic upgrades to network and server infrastructure, enhancing overall efficiency and responsiveness.</li>
+                        <li>Implemented Azure and AWS solutions to enhance scalability and reduce costs associated with legacy hardware, optimizing resource utilization and efficiency.</li>
+                    </ul>
+                </section>
+                <section class="item">
+                    <div class="section-header clearfix">
+                        <h3 class="bold pull-left">
+                                <a href="https://www.virgingalactic.com/" target="_blank">
+                                    Virgin Galactic
+                                </a>
+                        </h3>
+                        <h5 class="italic pull-right">
+                                <span class="startDate">06/2012</span>
+                                <span class="endDate"> - 11/2012</span>
+                        </h5>
+                    </div>
+        
+                    <h4>SENIOR SYSTEMS ENGINEER</h4>
+        
+        
+                    <p class="summary">Configured and maintained high-availability clusters for critical services, ensuring seamless access and reliability for users. Developed and implemented installation scripts to streamline deployment processes, improving operational efficiency. Implemented robust firewalls and intrusion detection systems to bolster network security and mitigate cyber threats. Monitored system performance and resource utilization, proactively identifying and resolving potential bottlenecks and issues. Conducted regular upgrades and maintenance activities to enhance system stability and efficiency. Implemented backup and disaster recovery strategies to safeguard critical data and ensure business continuity in adverse scenarios. 
+        </p>
+        
+                    <ul>
+                        <li>Recognized for exceptional performance, advanced from System Administrator to higher roles within the organization. Led storage migration initiatives to SANs and PowerVaults, establishing data redundancy and improving storage efficiency. Streamlined access management by integrating Linux servers with Active Directory, optimizing user authentication processes. Improved workflows by automating routine tasks with custom scripts, reducing manual intervention and errors. Revamped VPNs, networks, and servers to enhance reliability/performance, ensuring seamless connectivity for users. Designed fault-tolerant system architectures to accommodate diverse user requirements and ensure system resilience. Achieved a 100% success rate in resolving complex technical issues.  Introduced cloud-based virtualization solutions, resulting in a 70% reduction in infrastructure costs while maximizing scalability and resource utilization. Spearheaded system security efforts by conducting vulnerability scans and deploying patches, bolstering defenses against potential threats. Enhanced Group Policy Objects (GPO), Active Directory (AD), and security protocols to fortify system integrity and data protection measures.</li>
+                    </ul>
+                </section>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
