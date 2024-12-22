@@ -5,7 +5,6 @@ name: Publish resume in JSONResume format as Github Page
 on:
   push:
     branches: [ main resume-tweaks ]
-  workflow_dispatch:
   
 jobs:
   check_run:
