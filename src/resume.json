@@ -126,12 +126,10 @@
   "skills": [
     {
       "name": "Infrastructure",
-      "level": "Master",
       "keywords": ["Terraform/OpenTofu", "Ansible", "GCP", "AWS", "OnPrem"]
     },
     {
       "name": "Software Engineering",
-      "level": "Advanced",
       "keywords": ["Go", "Python", "Bash", "Node.js", "Powershell"]
     }
   ],
