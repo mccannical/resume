@@ -46,20 +46,9 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.ref }}
-  publish:
-    runs-on: ubuntu-latest
-    name: Publish Document
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Publish PDF Document
-        uses: shrink/actions-document-publish@v1
-        id: publish-document
+      - name: html to pdf
+        uses: fifsky/html-to-pdf-action@master
         with:
-          sources: 'documents/front.md documents/examples/**/*.md documents/back.md'
-      - name: Upload Document
-        uses: actions/upload-artifact@v2
-        id: upload-document
-        with:
-          name: 'document.pdf'
-          path: ${{ steps.publish-document.outputs.pdf }}
+          htmlFile: ./docs/index.html
+          outputFile: ./resume.pdf
+          pdfOptions: '{"format": "A4", "margin": {"top": "10mm", "left": "10mm", "right": "10mm", "bottom": "10mm"}}'
