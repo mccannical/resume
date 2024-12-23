@@ -29,7 +29,7 @@
     },
     "work": [
         {
-            "company": "DTEX Systems",
+            "name": "DTEX Systems",
             "location": "Saratoga, CA (REMOTE)",
             "description": "Your Trusted Partner for Proactive Insider Risk Management",
             "position": "Site Reliability Engineer",
@@ -44,7 +44,7 @@
             ]
         },
         {
-            "company": "Confluent",
+            "name": "Confluent",
             "location": "Mountain View, CA (REMOTE)",
             "description": "The Data Streaming Platform. Kafka + Flink",
             "position": "Senior Cloud Systems Engineer",
@@ -61,7 +61,7 @@
             ]
         },
         {
-            "company": "Blackline",
+            "name": "Blackline",
             "location": "Woodland Hills, CA (REMOTE)",
             "description": "Standardize, control, and automate account reconciliation processes in minutes.",
             "position": "Staff System Engineer",
@@ -79,7 +79,7 @@
             ]
         },
         {
-            "company": "Applied Minds",
+            "name": "Applied Minds",
             "location": "Glendale, CA",
             "description": "Delivering innovation through technology, design and engineering",
             "position": "Senior Systems Engineer",
@@ -97,7 +97,7 @@
             ]
         },
         {
-            "company": "Virgin Galactic",
+            "name": "Virgin Galactic",
             "location": "Mojave, CA",
             "description": "The Spaceline for Earth.",
             "position": "Senior Systems Engineer",
